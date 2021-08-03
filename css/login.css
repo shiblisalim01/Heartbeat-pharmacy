@@ -1,0 +1,158 @@
+#wrapper{font-family:tahoma;}
+.container{
+	width:100%;
+    
+}
+#subheader {
+	width:100%;
+	height:30px;
+	background:black;
+	color:black;
+	margin-top:-15px;	
+}
+#subheader p {
+	float:left;
+	margin-top:7px;
+}
+/*logo styling*/
+#main-header {
+	width: 100%;
+	height: 100px;
+	background:#fff;
+	float:left;
+	margin-top:-15px;
+}
+#logo {
+    width:250px;
+    margin-top:10x;
+    float:left;
+}
+#ist {
+    padding: 20px;
+    color:rgb(255, 0, 0);
+    font-size:40px;
+    font-weight:bold;
+    margin-left:15px;
+    font-family:cursive;  
+}
+#iist {
+    color:RED;
+    font-size:40px;
+    font-weight:bold;
+    font-family:cursive;
+}
+#search {
+    width: 650px;
+    float: left;
+    padding: 20px;
+    margin-left:120px;
+}
+.search-area {
+    width: 550px;
+    height: 40px;
+    background: #fff;
+    float:left;
+    padding-left: 15px;
+}
+.search-btn {
+    width: 80px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    background: cadetblue;
+    margin-left: -80.1px;
+}
+#user-menu {
+    width: 300px;
+    float: right;
+    margin-top: 20px;
+}
+#user-menu li {
+    float:left;
+    width: 149px;
+    text-align: center;
+    list-style: none;
+    font-size:20px;
+    border-left:1px solid black;
+}
+#user-menu li:hover {
+    font-size:30px;
+    transition: all .5s ease;
+}
+#user-menu li a {
+    color:black;
+    text-decoration:none;
+}
+
+#navigation {
+    width: 100%;
+    height: 35px;
+    background:cadetblue;
+    float: left;
+}
+
+nav {
+    width: 1280px;
+    margin: 0 auto;
+}
+nav a{
+    margin-left: 175px;
+    line-height: 35px;
+    color: black;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: red;
+    border: 5px solid red;
+    border-radius: 20px;
+    box-shadow: 2px 2xp 4px gray;
+    transition: all .7s ease;
+}
+
+#containe {
+     width: 400px;
+    float: left;
+    padding: 20px;
+    margin-left:250px;
+    margin-top: -20px;
+    
+}
+.text {
+    width: 300px;
+    height: 30px;
+    background: #fff;
+    float:left;
+    padding-left: 15px;
+}
+.password {
+    width: 300px;
+    height: 30px;
+    background: #fff;
+    float:left;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+#forgot {
+    margin-top: 90px;
+}
+#forgot a{
+     text-decoration: none;
+    font-family: arial;
+}
+.submit {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    color: #fff;
+    background: cadetblue;
+    margin-left:10px;
+}
+.signup {
+    margin-top: -39px;
+     margin-left:125px;
+}
+.signup a {
+      text-decoration: none;
+    color: blue;
+}
