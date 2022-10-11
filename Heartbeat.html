@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,38 @@
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/stylesheet1.css" />
-    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    
+
+    <!-- search bar css start -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- search bar css end -->
+
+
 </head>
+
 <body>
     <!-- navbar -->
     <nav id="navbar">
         <div id="logo">
-            <img  src="images/favicon.ico" alt="Heartbeat" >
+            <img src="images/favicon.ico" alt="Heartbeat">
         </div>
         <ul>
             <li class="item"><a href="a">HOME</a></li>
             <li class="item"><a href="a">PRODUCT</a>
-                  
+
             </li>
-                </div>
-              </div></li>
+            </div>
+            </div>
+            </li>
             <li class="item"><a href="a">ABOUT US</a></li>
             <li class="item"><a href="a">CONTACT US</a></li>
         </ul>
         <div class="Login">
-            <button class="log" type="submit"  onclick="window.location.href='Login.html'">Log in</button>
+            <button class="log" type="submit" onclick="window.location.href='Login.html'">Log in</button>
             <button class="sign" type="submit" onclick="window.location.href='signup.html'">Sign up</button>
 
         </div>
@@ -36,87 +47,136 @@
     <section id="home">
         <h1 class="home_h1">HEARTBEAT &nbsp; PHARMACY</h1>
         <p class="para1">As reliable as your family.</p>
-        <div class="home_i">
-        <input class="btn1" type="search" placeholder=" search ">
-        <input class="btn2" type="submit" value="search">
-        </div>
- </section>
-<!-- Collections -->
-<div class="slideshow-container">
 
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 4</div>
-      <img src="images/home (4).png" style="width:100%"  >
-      
-    </div>
-    
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 4</div>
-      <img src="images/home (1).jpg" style="width:100%">
-      
-    </div>
-    
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 4</div>
-      <img src="images/home (2).jpg" style="width:100%">
-      
-    </div>
-    <div class="mySlides fade">
-      <div class="numbertext">4 / 4</div>
-      <img src="images/home (3).jpg" style="width:100%">
-      
-    </div>
-    
+
+        <!-- search button start  -->
+
+        <section class="search-box">
+            <input class="search-txt" type="text" name="" placeholder="Type to search">
+            <a class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+            </a>
+        </section>
+
+
+        <!-- search button end -->
+    </section>
+
+
+
+
+
+
+    <!-- Collections -->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="images/home (4).png" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="images/home (1).jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="images/home (2).jpg" style="width:100%">
+
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="images/home (3).jpg" style="width:100%">
+
+        </div>
+
     </div>
     <br>
-    
+
     <div style="text-align:center">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
     </div>
-    
+
     <script>
-    var slideIndex = 0;
-    showSlides();
-    
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-           slides[i].style.display = "none";  
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
         }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-        setTimeout(showSlides, 3000); // Change image every 2 seconds
-    }
     </script>
-<!-- ORDER NOW -->
- <section class="ordernow">
-    <h2 class="order_h">ORDER NOW</h2>
-    <p class="order_p">Bringing the medicine at your door</p>
-    <div class="order_cont">
-        <div class="row1">
-        <div class="order" id=order1>Covid-19 Essentials</div>
-        <div class="order" id=order2>Baby Care </div>
-        <div class="order" id=order3>Nutrition</div>
-        <div class="order" id=order4>Himalaya</div>
+    <!-- ORDER NOW -->
+    <section class="ordernow">
+        <h2 class="order_h">ORDER NOW</h2>
+        <p class="order_p">Bringing the medicine at your door</p>
+
+
+        <div class="order_cont">
+            <div class="row1">
+                <div class="order" id=order1>Covid-19 Essentials</div>
+                <div class="order" id=order2>Baby Care </div>
+                <div class="order" id=order3>Nutrition</div>
+                <div class="order" id=order4>Himalaya</div>
+            </div>
+            <div class="row2">
+                <div class="order" id=order5>Personal Care</div>
+                <div class="order" id=order6>Ayurvedic</div>
+                <div class="order" id=order7>Skin & hair</div>
+                <div class="order" id=order8>Human Wellness</div>
+            </div>
+
         </div>
-        <div class="row2">
-        <div class="order" id=order5>Personal Care</div>
-        <div class="order" id=order6>Ayurvedic</div>
-        <div class="order" id=order7>Skin & Hair</div>
-        <div class="order" id=order8>Human Wellness</div>
+
+
+
+        <!-- cards -->
+        <div class="scrolling-wrapper">
+            <div onclick="window.location.href='Productpage.html'" class="card"><img class="m1" src="images/m1.jpg">
+                <h3>Paracetamol</h3>
+            </div>
+            <div onclick="window.location.href='Productpage.html'" class="card"><img class="m1" src="images/m2.png">
+                <h3>Supracal HD</h3>
+            </div>
+            <div onclick="window.location.href='Productpage.html'" class="card"><img class="m1" src="images/m3.jpg">
+                <h3>Genvoya</h3>
+            </div>
+            <div onclick="window.location.href='Productpage.html'" class="card"><img class="m1" src="images/m4.jpg">
+                <h3>Osssopan 500</h3>
+            </div>
+            <div onclick="window.location.href='Productpage.html'" class="card"><img class="m1" src="images/m5.jpg">
+                <h3>Ferrifort-xt</h3>
+            </div>
+            <div onclick="window.location.href='Productpage.html'" class="card"><img class="m1" src="images/m6.jpg">
+                <h3>Cetcip</h3>
+            </div>
+            <div onclick="window.location.href='Productpage.html'" class="card"><img class="m1" src="images/m7.jpg">
+                <h3>Card</h3>
+            </div>
+
+
         </div>
-      
-    </div>
+
 
 </section>
 
@@ -157,9 +217,15 @@
     </div>
     <p class="footer_p2"> THIS WEBSITE IS MADE BY SHIBLI SALIM </p>
 
-    
-</footer>
+
+            </div>
+            <p class="footer_p2"> THIS WEBSITE IS MADE BY SHIBLI SALIM </p>
+
+
+        </footer>
 
 
 </body>
+
 </html>
+
